@@ -29,10 +29,10 @@ This pipeline requires the following R packages:
 
 Install missing packages using:
 
-install.packages("BiocManager")
-BiocManager::install("orthogene")
-install.packages("readr")
-install.packages("writexl")
+- install.packages("BiocManager")
+- BiocManager::install("orthogene")
+- install.packages("readr")
+- install.packages("writexl")
 
 **Input Format**
 The input file should be a CSV file containing differential expression results.
@@ -40,32 +40,30 @@ Required column:
 	•	ID → Gene identifiers (preferably Ensembl IDs)
 
 **Workflow Description**
-1. Load input data
-Reads DE results.
+1. Load input data: Reads in the DE results.
 
 2. Define species mapping
-Set source and target species:
-input_species <- "mouse"
-output_species <- "human"
+	•	Set source and target species:
+		- input_species <- "mouse"
+        - output_species <- "human"
 
 3. Ortholog conversion
-Uses orthogene::convert_orthologs() to map genes across species.
+	•	Uses orthogene::convert_orthologs() to map genes across species.
 Key settings:
-	•	Method: gprofiler
-	•	Keeps genes without orthologs (optional)
-	•	Supports one-to-many mappings
+   - Method: gprofiler
+   - Keeps genes without orthologs (optional)
+   - Supports one-to-many mappings
 
-4. Merge results
-Orthologs are merged back into the original DE table.
+5. Merge results
+	•	Orthologs are merged back into the original DE table.
 
-5. Summary statistics
+6. Summary statistics
 Reports:
 	•	Number of genes with orthologs
 	•	Number of unique orthologs
 	•	Missing mappings (NA, "N/A")
 
-6. Output generation
-Writes final dataset to: Differential_expression_analysis_table.ortholog.csv
+7. Output generation: Writes final dataset to: Differential_expression_analysis_table.ortholog.csv
 
 **Output Description**
 The final output file contains:
@@ -73,9 +71,9 @@ The final output file contains:
 	•	ortholog_gene → mapped gene symbol in target species
 
 **Example Usage**
-Run the script in R: source("ortholog_conversion.R")
-
-Or execute step-by-step within an R session.
+- Run the script in R: source("ortholog_conversion.R")
+Or 
+- Execute step-by-step within an R session.
 
 **Typical Use Cases**
 	•	Mouse → Human translational analysis
