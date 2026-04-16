@@ -5,7 +5,7 @@
 
 
 
-**Overview**
+## **Overview**
 
 This repository provides a simple and reproducible pipeline to convert gene identifiers between species using the R package orthogene.
 It is primarily designed for:
@@ -16,7 +16,7 @@ It is primarily designed for:
 The workflow maps genes from one species to orthologs in another while preserving the original dataset structure.
 
 
-**Features**
+## **Features**
 
 -	Converts gene identifiers using g:Profiler-based orthology mapping
 -	Supports flexible input/output species selection
@@ -26,7 +26,7 @@ The workflow maps genes from one species to orthologs in another while preservin
 -	Outputs a clean, ready-to-use CSV file
 
 
-**Dependencies**
+## **Dependencies**
 
 This pipeline requires the following R packages:
 - BiocManager
@@ -42,14 +42,14 @@ Install missing packages using:
 - install.packages("writexl")
 
 
-**Input Format**
+## **Input Format**
 
 The input file should be a CSV file containing differential expression results.
 
 -	Required column: ID → Gene identifiers (preferably Ensembl IDs)
 
 
-**Workflow Description**
+## **Workflow Description**
 
 1. Load input data: Reads in the DE results.
 
@@ -78,20 +78,20 @@ Reports:
 6. Output generation: Writes final dataset to: DGE_table.ortholog.csv
 
 
-**Output Description**
+## **Output Description**
 
 The final output file contains:
 
-	- Original DE table columns
-	- ortholog_gene → mapped gene symbol in target species
+- Original DE table columns
+- ortholog_gene → mapped gene symbol in target species
 
 
-**Example Usage**
+## **Example Usage**
 
-- Run the script in R: source("ortholog_conversion.R") Or 
+- Run the script in R: source("ortholog_conversion.R")
 - Execute step-by-step within an R session.
 
 **Typical Use Cases**
 
-	- Mouse → Human translational analysis
-	- Cross-species RNA-seq comparison
+- Mouse → Human translational analysis
+- Cross-species RNA-seq comparison
