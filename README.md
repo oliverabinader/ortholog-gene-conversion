@@ -91,7 +91,7 @@ The final output file contains:
 - Run the script in R: source("ortholog_conversion.R")
 - Execute step-by-step within an R session.
 
-**Typical Use Cases**
+## **Typical Use Cases**
 
 - Mouse → Human translational analysis
 - Cross-species RNA-seq comparison
