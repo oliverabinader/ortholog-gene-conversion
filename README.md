@@ -11,6 +11,7 @@ It is primarily designed for:
 -	Differential expression (DE) datasets
 -	Cross-species comparisons (e.g., mouse → human)
 -	Downstream pathway analysis and integration 
+
 The workflow maps genes from one species to orthologs in another while preserving the original dataset structure.
 
 **Features**
@@ -40,6 +41,7 @@ Install missing packages using:
 **Input Format**
 
 The input file should be a CSV file containing differential expression results.
+
 -	Required column: ID → Gene identifiers (preferably Ensembl IDs)
 
 **Workflow Description**
@@ -53,6 +55,7 @@ The input file should be a CSV file containing differential expression results.
 
 3. Ortholog conversion
    - Uses orthogene::convert_orthologs() to map genes across species.
+     
 Key settings:
    - Method: gprofiler
    - Keeps genes without orthologs (optional)
